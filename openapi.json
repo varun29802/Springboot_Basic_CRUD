@@ -1,0 +1,169 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "API Documentation",
+    "version" : "1.0"
+  },
+  "paths" : {
+    "/user/getAllUser" : {
+      "get" : {
+        "summary" : "getAllUser",
+        "description" : "getAllUser",
+        "responses" : {
+          "200" : {
+            "description" : "",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "empId" : {
+                        "type" : "string",
+                        "description" : ""
+                      },
+                      "empName" : {
+                        "type" : "string",
+                        "description" : ""
+                      },
+                      "empContactNumber" : {
+                        "type" : "integer",
+                        "description" : ""
+                      },
+                      "empAge" : {
+                        "type" : "integer",
+                        "description" : ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/addUser" : {
+      "post" : {
+        "summary" : "saveUser",
+        "description" : "saveUser",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "empId" : {
+                    "type" : "string",
+                    "description" : ""
+                  },
+                  "empName" : {
+                    "type" : "string",
+                    "description" : ""
+                  },
+                  "empContactNumber" : {
+                    "type" : "integer",
+                    "description" : ""
+                  },
+                  "empAge" : {
+                    "type" : "integer",
+                    "description" : ""
+                  }
+                },
+                "description" : ""
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/updateUser" : {
+      "put" : {
+        "summary" : "updateUser",
+        "description" : "updateUser",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "empId" : {
+                    "type" : "string",
+                    "description" : ""
+                  },
+                  "empName" : {
+                    "type" : "string",
+                    "description" : ""
+                  },
+                  "empContactNumber" : {
+                    "type" : "integer",
+                    "description" : ""
+                  },
+                  "empAge" : {
+                    "type" : "integer",
+                    "description" : ""
+                  }
+                },
+                "description" : ""
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : { }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/deleteUser/{empId}" : {
+      "delete" : {
+        "summary" : "deleteUser",
+        "description" : "deleteUser",
+        "parameters" : [ {
+          "name" : "empId",
+          "in" : "path",
+          "description" : "",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : { }
+}
