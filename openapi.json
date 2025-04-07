@@ -15,28 +15,8 @@
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "type" : "array",
-                  "items" : {
-                    "type" : "object",
-                    "properties" : {
-                      "empId" : {
-                        "type" : "string",
-                        "description" : ""
-                      },
-                      "empName" : {
-                        "type" : "string",
-                        "description" : ""
-                      },
-                      "empContactNumber" : {
-                        "type" : "integer",
-                        "description" : ""
-                      },
-                      "empAge" : {
-                        "type" : "integer",
-                        "description" : ""
-                      }
-                    }
-                  }
+                  "type" : "object",
+                  "properties" : { }
                 }
               }
             }
