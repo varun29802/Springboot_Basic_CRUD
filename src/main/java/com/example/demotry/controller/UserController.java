@@ -1,6 +1,6 @@
 package com.example.demotry.controller;
 
-import com.example.demotry.dto.User;
+import com.example.demotry.Model.User;
 import com.example.demotry.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -36,7 +36,7 @@ public class UserController {
         }
     }
 
-//   PUT update user details
+//  PUT update user details
     @PutMapping("/updateUser")
     public ResponseEntity<?> updateUser(@RequestBody User updatedUser) {
         if(userService.updateUser(updatedUser)==null){
@@ -46,14 +46,13 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.ACCEPTED).body(updateUserInList);
         }
     }
-
 //  DELETE a user
     @DeleteMapping("/deleteUser/{empId}")
     public ResponseEntity<String> deleteUser(@PathVariable String empId) {
-            if(userService.deleteUser(empId)==null){
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Wrong UserId");
-            }else{
-                return ResponseEntity.status(HttpStatus.OK).body("User Deleted Successfully");
-            }
+        if(userService.deleteUser(empId)==null){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Wrong UserId");
+        }else{
+            return ResponseEntity.status(HttpStatus.OK).body("User Deleted Successfully");
+        }
     }
 }
