@@ -70,6 +70,21 @@
 			<artifactId>postgresql</artifactId>
 			<!--<version>42.5.0</version> &lt;!&ndash; You can use the latest version available &ndash;&gt;-->
 		</dependency>
+
+		<!-- Exclude default Logback and add Log4j2 dependencies -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-logging</artifactId>
+			<scope>provided</scope> <!-- Exclude Logback -->
+		</dependency>
+
+		<!-- Log4j2 dependencies -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
